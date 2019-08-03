@@ -48,3 +48,5 @@
 10_build-against-libsystemd.patch
 Move-D-Bus-policy-file-to-usr-share-dbus-1-system.d.patch
 0.116/backend-Compare-PolkitUnixProcess-uids-for-temporary-auth.patch
+# deepin
+deepin-gparted-show.patch
