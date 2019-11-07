@@ -25,11 +25,11 @@ index abc660d..7bd8e92 100644
 +// developer mode file, format: '{"enabled": true}'
 +#define DEVELOPER_MODE_FILE "/var/lib/deepin/developer_mode.json"
 +#define DEVELOPER_MODE_ENABLE_STR "\"enabled\":true"
-+#define ELF_WHILTELIST_FILE "/var/lib/deepin/deepin_elf_verify.whitelist"
++#define SECURITY_WHILTELIST_FILE "/var/lib/deepin/deepin_security_verify.whitelist"
 +
 +static int has_in_developer_mode();
 +static int has_in_whitelist(const char *path);
-+static int elf_verify_check(const char *path);
++static int security_verify_check(const char *path);
 +
  #ifndef HAVE_CLEARENV
  extern char **environ;
@@ -48,7 +48,7 @@ index abc660d..7bd8e92 100644
  /* ---------------------------------------------------------------------------------------------------- */
  
 +static int
-+elf_verify_check(const char *path)
++security_verify_check(const char *path)
 +{
 +    if (has_in_developer_mode()) {
 +        return 1;
@@ -71,7 +71,7 @@ index abc660d..7bd8e92 100644
 +
 +    while (!feof(fr)) {
 +        memset(buf, 0, MAX_BUF_SIZE);
-+        size_t n = fread(buf, sizeof(char), MAX_BUF_SIZE, fr);
++        size_t n = fgets(buf, MAX_BUF_SIZE, fr);
 +        if (n == 0) {
 +            break;
 +        }
@@ -93,14 +93,14 @@ index abc660d..7bd8e92 100644
 +    int ret = 0;
 +    char buf[MAX_BUF_SIZE] = {0};
 +
-+    FILE *fr = fopen(ELF_WHILTELIST_FILE, "r");
++    FILE *fr = fopen(SECURITY_WHILTELIST_FILE, "r");
 +    if (!fr) {
 +        return ret;
 +    }
 +
 +    while (!feof(fr)) {
 +        memset(buf, 0, MAX_BUF_SIZE);
-+        size_t n = fread(buf, sizeof(char), MAX_BUF_SIZE, fr);
++        size_t n = fgets(buf, MAX_BUF_SIZE, fr);
 +        if (n == 0) {
 +            break;
 +        }
@@ -127,8 +127,8 @@ index abc660d..7bd8e92 100644
    command_line = g_strjoinv (" ", argv + n);
    exec_argv = argv + n;
  
-+  if (!elf_verify_check(path)) {
-+      g_printerr("Failed to check elf verify for: %s\n", path);
++  if (!security_verify_check(path)) {
++      g_printerr("Failed to check security for: %s\n", path);
 +      goto out;
 +  }
 +
