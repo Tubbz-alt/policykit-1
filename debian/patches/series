@@ -51,3 +51,4 @@ Move-D-Bus-policy-file-to-usr-share-dbus-1-system.d.patch
 # deepin
 deepin-gparted-show.patch
 deepin_security_verify.patch
+deepin_security_verify_whitelist.patch

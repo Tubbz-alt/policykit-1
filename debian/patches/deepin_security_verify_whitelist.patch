@@ -1,0 +1,7 @@
+Index: policykit-1/deepin/deepin_security_verify.whitelist
+===================================================================
+--- /dev/null
++++ policykit-1/deepin/deepin_security_verify.whitelist
+@@ -0,0 +1,2 @@
++/usr/sbin/gparted
++/sbin/gparted
