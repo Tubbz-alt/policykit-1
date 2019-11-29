@@ -1,3 +1,4 @@
+deepin/ /var/lib
 debian/polkit.service lib/systemd/system/
 etc/pam.d/
 etc/polkit-1/
