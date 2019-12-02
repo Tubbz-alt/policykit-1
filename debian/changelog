@@ -1,4 +1,4 @@
-policykit-1 (0.105.8-1+deepin) unstable; urgency=medium
+policykit-1 (0.105.9-1+deepin) unstable; urgency=medium
 
   * Team upload
   * Add tests-add-tests-for-high-uids.patch

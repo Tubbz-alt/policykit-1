@@ -2,8 +2,12 @@ Index: policykit-1/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
 +++ policykit-1/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,4 @@
+@@ -0,0 +1,8 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
 +/usr/bin/deepin-devicemanager
++/usr/bin/dde-file-manager
++/usr/bin/deepin-font-manager
++/usr/bin/deepin-log-viewer
++/usr/bin/deepin-graphics-driver-manager
