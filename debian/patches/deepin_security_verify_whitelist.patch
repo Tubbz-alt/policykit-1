@@ -2,12 +2,17 @@ Index: policykit-1/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
 +++ policykit-1/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,8 @@
+@@ -0,0 +1,13 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
 +/usr/bin/deepin-devicemanager
++/usr/bin/deepin-devicemanager-authenticateProxy
 +/usr/bin/dde-file-manager
++/usr/bin/dde-file-manager-pkexec
 +/usr/bin/deepin-font-manager
++/usr/bin/dfont-install
++/usr/bin/dfont-uninstall
 +/usr/bin/deepin-log-viewer
++/usr/bin/logViewerAuth
 +/usr/bin/deepin-graphics-driver-manager
