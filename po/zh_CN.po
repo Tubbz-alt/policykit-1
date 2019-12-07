@@ -39,8 +39,8 @@ msgid ""
 "Authentication is required to run the PolicyKit example program Frobnicate "
 "(user=$(user), program=$(program), command_line=$(command_line))"
 msgstr ""
-"需要身份验证才能运行PolicyKit示例程序Frobnicate（user = $（user），program = "
-"$（program），command_line = $（command_line））"
+"需要身份验证才能运行PolicyKit示例程序Frobnicate（user = $(user), program = "
+"$(program)，command_line = $(command_line)）"
 
 #: ../src/examples/org.freedesktop.policykit.examples.pkexec.policy.in.h:2
 msgid "Run the PolicyKit example program Frobnicate"
@@ -52,7 +52,7 @@ msgstr "运行PolicyKit示例程序Frobnicate"
 #.
 #: ../src/programs/pkexec.c:666
 msgid "Authentication is needed to run `$(program)' as the super user"
-msgstr "需要身份验证才能以超级用户身份运行`$（program）'"
+msgstr "需要身份验证才能以超级用户身份运行`$(program)'"
 
 #. Translators: message shown when trying to run a program as another user.
 #. * Do not translate the $(program) or $(user) fragments - the former will
@@ -61,4 +61,4 @@ msgstr "需要身份验证才能以超级用户身份运行`$（program）'"
 #.
 #: ../src/programs/pkexec.c:676
 msgid "Authentication is needed to run `$(program)' as user $(user)"
-msgstr "以用户$（user）身份运行`$（program）'需要身份验证"
+msgstr "以用户$(user)身份运行`$(program)'需要身份验证"
