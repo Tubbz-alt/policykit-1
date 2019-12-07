@@ -2,7 +2,7 @@ Index: policykit-1/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
 +++ policykit-1/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,16 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
@@ -16,3 +16,6 @@ Index: policykit-1/deepin/deepin_security_verify.whitelist
 +/usr/bin/deepin-log-viewer
 +/usr/bin/logViewerAuth
 +/usr/bin/deepin-graphics-driver-manager
++/usr/sbin/overlayroot-chroot
++/usr/sbin/overlayroot-disable
++/usr/sbin/overlayroot-enable
