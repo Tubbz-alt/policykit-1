@@ -1,8 +1,8 @@
-Index: policykit-1/deepin/deepin_security_verify.whitelist
+Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
-+++ policykit-1/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,16 @@
++++ policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
+@@ -0,0 +1,17 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
@@ -19,3 +19,4 @@ Index: policykit-1/deepin/deepin_security_verify.whitelist
 +/usr/sbin/overlayroot-chroot
 +/usr/sbin/overlayroot-disable
 +/usr/sbin/overlayroot-enable
++/usr/bin/renice
