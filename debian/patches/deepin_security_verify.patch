@@ -128,7 +128,7 @@ index abc660d..7bd8e92 100644
    exec_argv = argv + n;
  
 +  if (!security_verify_check(path)) {
-+      g_printerr("Failed to check security for: %s\n", path);
++      g_printerr("%s\n", N_("No root privileges. Please request root access in developer mode in Control Center."));
 +      goto out;
 +  }
 +
