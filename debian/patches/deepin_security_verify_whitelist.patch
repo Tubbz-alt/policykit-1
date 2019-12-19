@@ -2,7 +2,7 @@ Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
 +++ policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,14 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
@@ -16,3 +16,4 @@ Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
 +/usr/sbin/overlayroot-disable
 +/usr/sbin/overlayroot-enable
 +/usr/bin/renice
++/usr/lib/dde-control-center/develop-tool
