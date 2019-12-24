@@ -1,0 +1,14 @@
+Index: policykit-1-0.105.9.7/src/polkitbackend/polkitbackendinteractiveauthority.c
+===================================================================
+--- policykit-1-0.105.9.7.orig/src/polkitbackend/polkitbackendinteractiveauthority.c
++++ policykit-1-0.105.9.7/src/polkitbackend/polkitbackendinteractiveauthority.c
+@@ -2427,7 +2427,8 @@ polkit_backend_interactive_authority_reg
+   priv->agent_serial++;
+   agent = authentication_agent_new (priv->agent_serial,
+                                     subject,
+-                                    user_of_caller,
++                                    user_of_subject,/*fix pkexec fails with No session for cookie,
++                                    upstream issue:https://gitlab.freedesktop.org/polkit/polkit/issues/17*/
+                                     polkit_system_bus_name_get_name (POLKIT_SYSTEM_BUS_NAME (caller)),
+                                     locale,
+                                     object_path,

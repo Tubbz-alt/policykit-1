@@ -52,3 +52,4 @@ Move-D-Bus-policy-file-to-usr-share-dbus-1-system.d.patch
 deepin-gparted-show.patch
 deepin_security_verify.patch
 deepin_security_verify_whitelist.patch
+fix-pkexec-fails-with-no-session-for-cookie.patch
