@@ -3,7 +3,7 @@ Date: Thue, 31 Oct 2019 14:04:32 +0800
 Subject: add deepin elf verify checker
 ---
  src/programs/pkexec.c | 94 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
- 1 file changed, 92 insertions(+), 2 deletions(-)
+ 1 file changed, 89 insertions(+), 1 deletions(-)
 
 diff --git a/src/programs/pkexec.c b/src/programs/pkexec.c
 index abc660d..7bd8e92 100644
@@ -17,14 +17,13 @@ index abc660d..7bd8e92 100644
  #include <string.h>
  #include <stdlib.h>
  #include <sys/types.h>
-@@ -57,6 +58,16 @@ static gchar *original_cwd;
+@@ -57,6 +58,15 @@ static gchar *original_cwd;
  static gchar *command_line = NULL;
  static struct passwd *pw;
  
 +#define MAX_BUF_SIZE 1024
-+// developer mode file, format: '{"enabled": true}'
-+#define DEVELOPER_MODE_FILE "/var/lib/deepin/developer_mode.json"
-+#define DEVELOPER_MODE_ENABLE_STR "\"enabled\":true"
++#define DEVELOPER_MODE_FILE "/var/lib/deepin/developer-mode/enabled"
++#define DEVELOPER_MODE_ENABLE_STR "1"
 +#define SECURITY_WHILTELIST_FILE "/var/lib/deepin/deepin_security_verify.whitelist"
 +
 +static int has_in_developer_mode();
@@ -34,16 +33,7 @@ index abc660d..7bd8e92 100644
  #ifndef HAVE_CLEARENV
  extern char **environ;
  
-@@ -198,7 +209,7 @@ open_session (const gchar *user_to_auth,
-       for (n = 0; envlist[n]; n++)
- 	{
- 	  const char *envitem = envlist[n];
--	  
-+
- 	  if (g_str_has_prefix (envitem, "XDG_RUNTIME_DIR="))
- 	    {
- 	      const char *eq = strchr (envitem, '=');
-@@ -418,6 +429,79 @@ validate_environment_variable (const gchar *key,
+@@ -418,6 +429,78 @@ validate_environment_variable (const gchar *key,
  
  /* ---------------------------------------------------------------------------------------------------- */
  
@@ -76,8 +66,7 @@ index abc660d..7bd8e92 100644
 +            break;
 +        }
 +
-+        char *found = strstr(buf, DEVELOPER_MODE_ENABLE_STR);
-+        if (found) {
++        if (strcmp(buf, DEVELOPER_MODE_ENABLE_STR) == 0) {
 +            ret = 1;
 +            break;
 +        }
