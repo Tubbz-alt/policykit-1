@@ -18,3 +18,4 @@ Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
 +/usr/bin/renice
 +/usr/lib/dde-control-center/develop-tool
 +/bin/restore-tool
++/usr/bin/kill
