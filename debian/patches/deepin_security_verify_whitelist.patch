@@ -2,7 +2,7 @@ Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
 +++ policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,14 @@
+@@ -0,0 +1,16 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
