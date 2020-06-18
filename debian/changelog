@@ -1,3 +1,7 @@
+policykit-1 (0.105.10.3-1+eagle+dde1) unstable; urgency=medium
+
+  * Set polkit whitelist to immutable
+
 policykit-1 (0.105.9-1+deepin) unstable; urgency=medium
 
   * Team upload
