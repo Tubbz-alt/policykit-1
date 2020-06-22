@@ -1,8 +1,8 @@
-Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
+Index: policykit-1-0.105.10.3/deepin/deepin_security_verify.whitelist
 ===================================================================
 --- /dev/null
-+++ policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
-@@ -0,0 +1,17 @@
++++ policykit-1-0.105.10.3/deepin/deepin_security_verify.whitelist
+@@ -0,0 +1,18 @@
 +/usr/sbin/gparted
 +/sbin/gparted
 +/usr/bin/uos-apt-login
@@ -20,3 +20,4 @@ Index: policykit-1-0.105.9/deepin/deepin_security_verify.whitelist
 +/bin/restore-tool
 +/usr/bin/kill
 +/usr/lib/deepin-recovery/prepare_recovery
++/usr/lib/deepin-graphics-driver-manager/working-dir/control_driver.sh
