@@ -20,4 +20,4 @@ Index: policykit-1-0.105.10.3/deepin/deepin_security_verify.whitelist
 +/bin/restore-tool
 +/usr/bin/kill
 +/usr/lib/deepin-recovery/prepare_recovery
-+/usr/lib/deepin-graphics-driver-manager/working-dir/control_driver.sh
++/usr/lib/deepin-graphics-driver-manager/control_driver.sh
