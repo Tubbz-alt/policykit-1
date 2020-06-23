@@ -34,6 +34,8 @@ case "$1" in
 	set_perms root root 700 /etc/polkit-1/localauthority
 	set_perms root root 4755 /usr/lib/policykit-1/polkit-agent-helper-1
 	set_perms root root 4755 /usr/bin/pkexec
+	chattr -i /var/lib/deepin/deepin_security_verify.whitelist || /bin/true
+	cp -f /usr/share/deepin/deepin_security_verify.whitelist /var/lib/deepin/deepin_security_verify.whitelist || /bin/true
 	chattr +i /var/lib/deepin/deepin_security_verify.whitelist || /bin/true
 
 	# The service file was renamed to polkit.service to match the upstream name.
