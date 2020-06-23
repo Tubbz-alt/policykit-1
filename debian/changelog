@@ -1,4 +1,4 @@
-policykit-1 (0.105.10.3-1+eagle+dde1) unstable; urgency=medium
+policykit-1 (0.105.10.3-1+eagle+dde2) unstable; urgency=medium
 
   * Set polkit whitelist to immutable
 

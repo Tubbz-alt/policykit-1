@@ -1,4 +1,4 @@
-deepin/ /var/lib
+deepin/ /usr/share/
 debian/polkit.service lib/systemd/system/
 etc/pam.d/
 etc/polkit-1/
