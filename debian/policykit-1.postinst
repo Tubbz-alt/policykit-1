@@ -35,6 +35,7 @@ case "$1" in
 	set_perms root root 4755 /usr/lib/policykit-1/polkit-agent-helper-1
 	set_perms root root 4755 /usr/bin/pkexec
 	chattr -i /var/lib/deepin/deepin_security_verify.whitelist || /bin/true
+	if [ ! -d /var/lib/deepin ] ; then mkdir /var/lib/deepin ; fi
 	cp -f /usr/share/deepin/deepin_security_verify.whitelist /var/lib/deepin/deepin_security_verify.whitelist || /bin/true
 	chattr +i /var/lib/deepin/deepin_security_verify.whitelist || /bin/true
 
