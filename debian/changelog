@@ -1,3 +1,9 @@
+policykit-1 (0.105.10.4-1+dde) UNRELEASED; urgency=medium
+
+  * update whitelist for deepin-recovery-tool
+
+ -- liuyong <liuyong@uniontech.com>  Wed, 05 Aug 2020 15:44:40 +0800
+
 policykit-1 (0.105.10.3-2+dde2) unstable; urgency=medium
 
   * Set polkit whitelist to immutable
